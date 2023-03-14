@@ -74,5 +74,8 @@ router.post('/verify', async (req, res) => {
 
 app.use('', router)
 app.use('/api', router)
+app.use('/chat-api', router)
 
-app.listen(3002, () => globalThis.console.log('Server is running on port 3002'))
+const port = 8070
+
+app.listen(port, () => globalThis.console.log(`Server is running on port ${port}`))
